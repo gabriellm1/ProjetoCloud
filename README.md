@@ -18,7 +18,7 @@
    
  - Com o arquivo client pronto, testar o CRUD no terminal com:
  
-    - ./client listar : Irá listar todos os markers na base de dados (GET)
-    - ./client adicionar : Irá adicionar um marker na base de dados, sendo seu conteúdo dentro do arquivo post_or_put.json (POST)
-    - ./client atualizar : Irá atualizar um marker existente na base de dados, sendo seu conteúdo dentro do arquivo post_or_put.json.  Obs: Se tiver 2 ou mais iguais irá atualizar o mais recente adicionado/ou alterado. Se não houver o marker na base de dados, trará a resposta {"existence": false} (PUT)
-    - client apagar : Irá deletar um marker existente na base de dados, sendo seu conteúdo dentro do arquivo del.json. Obs: Se tiver 2 ou mais iguais irá atualizar o mais recente adicionado/ou alterado e retornar {'marker':'deleted'}. Se não houver o marker na base de dados, trará a resposta {"existence": false} (DELETE)
+    - `./client listar` : (GET) Irá listar todos os markers na base de dados 
+    - `./client adicionar` : (POST) Irá adicionar um marker na base de dados, sendo seu conteúdo dentro do arquivo post_or_put.json 
+    - `./client atualizar` : (PUT) Irá atualizar um marker existente na base de dados, sendo seu conteúdo dentro do arquivo post_or_put.json.  Obs: Se tiver 2 ou mais iguais irá atualizar o mais antigo adicionado/ou alterado. Se não houver o marker na base de dados, trará a resposta {"existence": false} 
+    - `./client apagar` : (DELETE) Irá deletar um marker existente na base de dados, sendo seu conteúdo dentro do arquivo del.json. Obs: Se tiver 2 ou mais iguais irá deletar o mais antigo adicionado/ou alterado e retornar {'marker':'deleted'}. Se não houver o marker na base de dados, trará a resposta {"existence": false} 
