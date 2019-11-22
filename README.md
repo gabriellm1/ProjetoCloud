@@ -3,7 +3,7 @@
 
 ## Introdução a aplicação
 
-  Foi utilizado uma base de dados mongo em conexão com um WebServer em Node.js . Esse WebServer foi reaproveitado de um backend de um app que eu desenvolvi. O app, por mais que fosse para outra aplicação, era inspirado no app da yellow, então na base de dados desse projeto será encontrado "markers", que são objetos com nome e a localização do usuário(latitude,longitude). Com fins de focar apenas na parte da infraestrutura, o WebServer faz uso apenas das partes dos markers e nela não diferencia inserções iguias, então todo POST incluirá uma collection diferente sempre(criando um novo index). Dessa forma o PUT e o DELETE terão um comportamento específico que está explicado nas instruções. 
+  Foi utilizado uma base de dados mongo em conexão com um WebServer em Node.js . Esse WebServer foi reaproveitado de um backend de um app que eu desenvolvi. O app, por mais que fosse para outra aplicação, era inspirado no app da yellow, então na base de dados desse projeto será encontrado "markers", que são objetos com nome e a localização do usuário(latitude,longitude). Com fins de focar apenas na parte da infraestrutura, o WebServer faz uso apenas das partes dos markers e nela não diferencia inserções iguias, então todo POST incluirá uma collection diferente sempre(criando um novo index). Dessa forma o PUT e o DELETE terão um comportamento específico que está explicado nas instruções. Os WebServers que rodam na instância intermediadora e nas instâncias do auto scale são servidores Flask que recebem um request e refaz outro.
 
 ## Instruções
 
