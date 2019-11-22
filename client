@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import sys
+import requests
+import os
+import json
+
+server_addr = "dns_lb"
+
+if sys.argv[1] == "listar":
+    r = requests.get('http://'+server_addr+':8080/')
+    print(json.dumps(r.json(),indent=2))
+elif sys.argv[1] == "apagar":
+    with open('del.json') as json_file:
+        data = json.load(json_file)
+    r = requests.delete('http://'+server_addr+':8080/posts',json=data)
+    print(json.dumps(r.json(),indent=2))
+elif sys.argv[1] == "atualizar":
+    with open('post_or_put.json') as json_file:
+        data = json.load(json_file)
+    r = requests.put('http://'+server_addr+':8080/posts',json=data)
+    print(json.dumps(r.json(),indent=2))
+elif sys.argv[1] == "adicionar":
+    with open('post_or_put.json') as json_file:
+        data = json.load(json_file)
+    r = requests.post('http://'+server_addr+':8080/posts',json=data)
+    print(json.dumps(r.json(),indent=2))
