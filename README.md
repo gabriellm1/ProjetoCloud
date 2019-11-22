@@ -20,5 +20,5 @@
  
     - `./client listar` : (GET) Irá listar todos os markers na base de dados 
     - `./client adicionar` : (POST) Irá adicionar um marker na base de dados, sendo seu conteúdo dentro do arquivo post_or_put.json 
-    - `./client atualizar` : (PUT) Irá atualizar um marker existente na base de dados, sendo seu conteúdo dentro do arquivo post_or_put.json.  Obs: Se tiver 2 ou mais iguais irá atualizar o mais antigo adicionado/ou alterado. Se não houver o marker na base de dados, trará a resposta {"existence": false} 
-    - `./client apagar` : (DELETE) Irá deletar um marker existente na base de dados, sendo seu conteúdo dentro do arquivo del.json. Obs: Se tiver 2 ou mais iguais irá deletar o mais antigo adicionado/ou alterado e retornar {'marker':'deleted'}. Se não houver o marker na base de dados, trará a resposta {"existence": false} 
+    - `./client atualizar` : (PUT) Irá atualizar um marker existente na base de dados, determinando o marker dentro do arquivo post_or_put.json.  Obs: Se tiver 2 ou mais iguais com o filtro passado no json, irá atualizar o mais antigo adicionado/ou alterado. Se não houver o marker na base de dados, trará a resposta {"existence": false} 
+    - `./client apagar` : (DELETE) Irá deletar um marker existente na base de dados, determinando o marker dentro do arquivo del.json. Obs: Se tiver 2 ou mais iguais com o filtro passado no json, irá deletar o mais antigo adicionado/ou alterado e retornar {'marker':'deleted'}. Se não houver o marker na base de dados, trará a resposta {"existence": false} 
