@@ -21,6 +21,13 @@ try:
 except Exception as e:
     print("KeyPair não existente\n")
 
+# Delete and Create a new KeyPair(Importing publickey)
+try:
+    ec2_virginia.delete_key_pair(KeyName='gabriel')
+    print("Deletando KeyPair\n")
+except Exception as e:
+    print("KeyPair não existente\n")
+
 key_file = open('id_rsa.pub','r')
 pub_key = key_file.read()
 
@@ -28,7 +35,14 @@ response = ec2.import_key_pair(
     KeyName='gabriel',
     PublicKeyMaterial=pub_key.encode('ASCII')
 )
-print("KeyPair 'gabriel' criado\n")
+print("KeyPair 'gabriel' criado em Ohio\n")
+
+
+response = ec2_virginia.import_key_pair(
+    KeyName='gabriel',
+    PublicKeyMaterial=pub_key.encode('ASCII')
+)
+print("KeyPair 'gabriel' criado em North Virginia\n")
 
 
 # gets instances and terminates them
